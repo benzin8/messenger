@@ -1,44 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Messenger — Вход</title>
-
-    <!-- Основные стили -->
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Messenger</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
 </head>
-
 <body>
+  <div class="app-container">
+    <header class="chat-header">
+      <h2>💬 SecureChat</h2>
+      <div class="status" id="connectionStatus">Соединение...</div>
+    </header>
 
-    <div class="container">
-        <div class="login-box">
-            
-            <h1 class="logo">Messenger</h1>
+    <div class="chat-container">
+      <div class="chat-box" id="chatBox"></div>
 
-            <form id="loginForm">
-                <div class="input-group">
-                    <label>Логин</label>
-                    <input type="text" id="username" required>
-                </div>
-
-                <div class="input-group">
-                    <label>Пароль</label>
-                    <input type="password" id="password" required>
-                </div>
-
-                <button type="submit" class="btn">Войти</button>
-            </form>
-
-            <p class="register">
-                Нет аккаунта?
-                <a href="register.html">Создать</a>
-            </p>
-
-        </div>
+      <div class="input-area">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Введите сообщение..."
+          maxlength="500"
+        />
+        <button id="sendBtn" disabled>Отправить</button>
+      </div>
     </div>
+  </div>
 
-    <script src="js/auth.js"></script>
-
+  <script src="/static/js/send_button.js"></script>
 </body>
 </html>
